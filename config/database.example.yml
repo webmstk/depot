@@ -1,0 +1,13 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: user
+
+development:
+  <<: *default
+  database: depot_development
+
+test:
+  <<: *default
+  database: depot_test
